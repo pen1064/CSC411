@@ -7,11 +7,10 @@ Here are the key steps:\
 4. Use the erorr to calculate the alpha (a.k.a amount of say), a float number that is "inversely" proportional to the error
 5. Now time to increase the weight for the incorrectly classified sample with alpha 
 6. Repeat the tree planting process until you finish planting the targeted number of trees in your "garden" 
-NOTE: The size of your tree depends on how well it predicts (amount of say)
-For example: 
-Predicted Value = alpha1*Tree_1 + alpha2*Tree_2 + ..... + alphan*Tree_n
+NOTE: The size of your tree depends on how well it predicts (amount of say). For example: \
+Predicted Value = `\alpha_{1}`*Tree_1 + `\alpha_{2}`*Tree_2 + ..... + `\alpha_{n}`*Tree_n
 
-One key difference in Adaboost wrt XGBoost:
+Key differences in Adaboost wrt XGBoost:
 1. In XGBoost, you deal with pesuedo residual. 
 2. The tree building process is based on similarity score, then you calculate the Gain to see if you want that or not (if Gain less than the node, don bother)
 3. The tree depth can be greater than 1 (given that you can prune the tree even when gamma = 0)
